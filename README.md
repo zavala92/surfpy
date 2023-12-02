@@ -17,7 +17,7 @@ In this context, we define the coordinate mapping $\varphi_i : \square_2 \righta
 
 $Q_{G_{2,k}}\varphi_{i}\left(\mathrm{x}\right) = \sum_{\alpha \in A_{2,k}}\varphi_{i}(p_\alpha)L_{\alpha} ,\quad i=1,\ldots, K$
 
-with $G_{2,k}$ being the tensorial Chebyshev–Lobatto grid and $A_{2,n}$ a multi-index set.
+with $G_{2,k}$ being the tensorial Chebyshev–Lobatto grid and $A_{2,k}$ a multi-index set.
 
 To obtain partial derivatives, forming the Jacobian matrix $DQ_{G_{2,k}}\varphi_{i}$, we utilize numerical spectral differentiation.
 
