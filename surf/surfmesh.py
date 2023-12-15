@@ -38,12 +38,12 @@ class SurfceMesh:
         D = cheb.at_order(1)
 
         for k in range(nelem):
-            self.xu.append(np.dot(x[k], D.T))
-            self.xv.append(np.dot(D, x[k]))
-            self.yu.append(np.dot(y[k], D.T))
-            self.yv.append(np.dot(D, y[k]))
-            self.zu.append(np.dot(z[k], D.T))
-            self.zv.append(np.dot(D, z[k]))
+            self.xu.append(x[k]@D.T)
+            self.xv.append(D@x[k])
+            self.yu.append(y[k]@D.T)
+            self.yv.append(D@y[k])
+            self.zu.append(z[k]@D.T)
+            self.zv.append(D@z[k])
 
             self.E.append(self.xu[k] * self.xu[k] + self.yu[k] * self.yu[k] + self.zu[k] * self.zu[k])
             self.G.append(self.xv[k] * self.xv[k] + self.yv[k] * self.yv[k] + self.zv[k] * self.zv[k])
