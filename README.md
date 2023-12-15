@@ -28,7 +28,7 @@ To obtain partial derivatives, forming the Jacobian matrix $DQ_{G_{2,k}}\varphi_
 
 The surface integral:
 
-$\int_S f dS \approx \sum_{i=1,...,K}\int_{\square_2} f(\varphi(\mathrm{x}))\sqrt{\det((DQ_{d,k}\varphi_i(\mathrm{x}))^T DQ_{d,k}\varphi_i(\mathrm{x}))}\,d\mathrm{x}$
+$\int_S f dS \approx \sum_{i=1,...,K}\int_{\square_2} f(\varphi(\mathrm{x}))\sqrt{\det((DQ_{d,k}\varphi_i(\mathrm{x}))^T DQ_{d,k}\varphi_i(\mathrm{x}))}d\mathrm{x}$
 $\approx \sum_{i=1,...,K} \sum_{\mathrm{p} \in P}\omega_{\mathrm{p}}f(\varphi_i(\mathrm{p})) \sqrt{\det((DQ_{d,k}\varphi_i(p))^T DQ_{d,k}\varphi_i(p))}$
 
 
