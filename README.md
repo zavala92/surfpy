@@ -1,6 +1,6 @@
-# About `surfy`
+# About `surfpy`
 
-`surfy` is a Python package for computing surface integrals over smooth embedded manifolds.
+`surfpy` is a Python package for computing surface integrals over smooth embedded manifolds.
 
 ## Surface Approximation through Polynomial Interpolation
 
@@ -29,7 +29,7 @@ $\int_S f dS \approx \sum_{i=1}^K\int_{\square_2} f(\varphi(\mathrm{x}))\sqrt{\d
 $\approx \sum_{i=1}^K \sum_{\mathrm{p} \in P}\omega_{\mathrm{p}}f(\varphi_i(\mathrm{p})) \sqrt{\det((DQ_{d,k}\varphi_i(p))^T DQ_{d,k}\varphi_i(p))}$
 
 
-This approach provides a robust method for accurate surface integral computations in the context of `surfy`.
+This approach provides a robust method for accurate surface integral computations in the context of `surfpy`.
 
 
 # Installation
