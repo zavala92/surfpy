@@ -1,3 +1,6 @@
+[![License](https://img.shields.io/github/license/zavala92/surfpy?style=flat-square)](https://choosealicense.com/licenses/mit/)
+[![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg?style=flat-square)](https://www.python.org/downloads/release/python-380/)
+
 # About `surfpy`
 
 `surfpy` is a Python package for computing surface integrals over smooth embedded manifolds.
