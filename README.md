@@ -16,7 +16,7 @@ Let's consider an element $T_{i}$ within a reference surface $S_h$. This involve
 
 In this context, we define the coordinate mapping $\varphi_i : \square_2 \rightarrow V_i$, given by $\varphi_i = \pi_i \circ \tau_i \circ \sigma$, where $\sigma$ maps the reference square $\square_2$ to the reference triangle $\Delta_2$.
 
- We say that the mesh is order $k$ if each element has been provided as a set of nodes $\{\varphi_{i}(p_\alpha)\}_{\alpha \in A_{2,k}}$ sampled at $\{p_\alpha\}_{\alpha \in A_{2,k}}$ on $S$. Consequently, we can numerically approximate the coordinate mapping on each element through interpolation using the nodes $\{\varphi_{i}(p_\alpha)\}_{\alpha\in A_{2,k}}$. In other words, our goal is to compute a $k^{\text{th}}$-order polynomial approximation:
+ We say that the mesh is order $k$ if each element has been provided as a set of nodes $\varphi_{i}(p_\alpha), \alpha \in A_{2,k}$ sampled at $\(p_\alpha), \alpha \in A_{2,k}$ on $S$. Consequently, we can numerically approximate the coordinate mapping on each element through interpolation using the nodes $\varphi_{i}(p_\alpha), \alpha \in A_{2,k}$. In other words, our goal is to compute a $k^{\text{th}}$-order polynomial approximation:
 
 $Q_{G_{2,k}}\varphi_{i}\left(\mathrm{x}\right) = \sum_{\alpha \in A_{2,k}}\varphi_{i}(p_\alpha)L_{\alpha} ,\quad i=1,\ldots, K$
 
@@ -28,8 +28,8 @@ To obtain partial derivatives, forming the Jacobian matrix $DQ_{G_{2,k}}\varphi_
 
 The surface integral:
 
-$\int_S f dS \approx \sum_{i=1}^K\int_{\square_2} f(\varphi(\mathrm{x}))\sqrt{\det((DQ_{d,k}\varphi_i(\mathrm{x}))^T DQ_{d,k}\varphi_i(\mathrm{x}))}\,d\mathrm{x}$
-$\approx \sum_{i=1}^K \sum_{\mathrm{p} \in P}\omega_{\mathrm{p}}f(\varphi_i(\mathrm{p})) \sqrt{\det((DQ_{d,k}\varphi_i(p))^T DQ_{d,k}\varphi_i(p))}$
+$\int_S f dS \approx \sum_{i=1,...,K}\int_{\square_2} f(\varphi(\mathrm{x}))\sqrt{\det((DQ_{d,k}\varphi_i(\mathrm{x}))^T DQ_{d,k}\varphi_i(\mathrm{x}))}\,d\mathrm{x}$
+$\approx \sum_{i=1,...,K} \sum_{\mathrm{p} \in P}\omega_{\mathrm{p}}f(\varphi_i(\mathrm{p})) \sqrt{\det((DQ_{d,k}\varphi_i(p))^T DQ_{d,k}\varphi_i(p))}$
 
 
 This approach provides a robust method for accurate surface integral computations in the context of `surfpy`.
