@@ -14,7 +14,7 @@ from quad_weights import quadwts
 from surfmesh import SurfceMesh
 
 
-def integration(fun_handle, ls_function, grad_func, mesh, interp_deg,call_vtk_mesh=False):
+def integration(fun_handle, ls_function, grad_func, mesh, interp_deg):
     """
     Compute integration of a function over curved triangles.
 
@@ -85,10 +85,6 @@ def integration(fun_handle, ls_function, grad_func, mesh, interp_deg,call_vtk_me
     J_sqrt = np.sqrt(np.abs(dom.J))
 
     # Calculate the final integration result
-    Σ= np.sum(f_values * np.kron(wv, wu) * J_sqrt)
-    if call_vtk_mesh:
-        # Call vtk_mesh with the necessary arguments
-        vtk_mesh(vertices, faces)  # Adjust scalar_values as needed
+    Σ = np.sum(f_values * np.kron(wv, wu) * J_sqrt)
 
     return Σ
-

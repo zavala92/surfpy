@@ -7,12 +7,13 @@ Copyright 2023 by Gentian Zavalani.
 import numpy as np
 from numba import njit
 
+
 @njit(fastmath=True)
 def SimpleImplicitSurfaceProjection(phi: callable, dphi: callable, x: np.ndarray, max_iter=10) -> np.ndarray:
     """Closest-point projection to surface given by implicit function 
-    using a simple projection algorithm.Surface S
+    using a simple projection algorithm. Surface S
     is given by zero-levelset of function F. We assume that 
-    F is differentiable in order to evaluate normals and tomdo an iterative projection.
+    F is differentiable in order to evaluate normals and to do an iterative projection.
 
     Parameters:
     ----------
@@ -28,7 +29,7 @@ def SimpleImplicitSurfaceProjection(phi: callable, dphi: callable, x: np.ndarray
     phi_v = phi(x)
     for i in range(max_iter):
         grad_phi = dphi(x)
-        grad_phi_norm = np.sum(grad_phi**2)
+        grad_phi_norm = np.sum(grad_phi ** 2)
         normalize = phi_v / grad_phi_norm
 
         if np.sqrt(phi_v * normalize) < tol:
