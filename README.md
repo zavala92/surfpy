@@ -59,7 +59,7 @@ Check out the **examples** folder &mdash; happy computing!
 
 
 
-Any comment or question, send an email to: g.zavalani@hzdr.de
+Any comment or question, send an email to: gentian.zavalani@tu-dresden.de
 
 
 ## License
